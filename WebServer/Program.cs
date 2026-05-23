@@ -1,6 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Добро пожаловать на сервер!");
+app.MapGet("/about", () => "Это мой первый ASP.NET Core сервер");
+app.MapGet("/time", () => $"Время на сервере: {DateTime.Now}");
+app.MapGet("/hello/{name}", (string name) => $"Привет, {name}!");
 
+app.MapGet("/student", () => new)
 app.Run();
